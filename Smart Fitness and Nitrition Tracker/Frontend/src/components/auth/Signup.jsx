@@ -38,7 +38,7 @@ export const Signup = () => {
     try {
       const response = await apiConnector(
         "POST",
-        "http://localhost:8080/api/users/register",
+        "http://localhost:8081/api/users/register",
         formData
       );      
       toast.success("Signup Successful!!");

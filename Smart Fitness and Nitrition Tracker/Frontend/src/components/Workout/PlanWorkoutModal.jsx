@@ -21,7 +21,7 @@ export const PlanWorkoutModal = ({ setPlanWorkoutModal }) => {
     try {
       const response = await apiConnector(
         "POST",
-        "http://localhost:8080/api/exercisePlan/create",
+        "http://localhost:8081/api/exercisePlan/create",
         exercisePlanData
       );
       toast.success("Exercise Plan added");

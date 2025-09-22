@@ -26,7 +26,7 @@ export const AddWorkoutModal = ({ setAddWorkoutModal }) => {
     try {
       const response = await apiConnector(
         "POST",
-        "http://localhost:8080/api/exercises/add",
+        "http://localhost:8081/api/exercises/add",
         newWorkoutData
       );
       console.log(response.data);

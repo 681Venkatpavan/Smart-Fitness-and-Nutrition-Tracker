@@ -24,7 +24,7 @@ export const Profile = () => {
   const fetchGoalData=async()=>{
     const toastId=toast.loading("Loading...");
     try {
-      const response=await apiConnector("GET",`http://localhost:8080/api/goals/${user.id}`)
+      const response=await apiConnector("GET",`http://localhost:8081/api/goals/${user.id}`)
       setGoalData(response.data);
       toast.dismiss(toastId);
     } catch (error) {
@@ -50,7 +50,7 @@ export const Profile = () => {
     try {
       const response = await apiConnector(
         "POST",
-        `http://localhost:8080/api/goals/add/${user.id}`,
+        `http://localhost:8081/api/goals/add/${user.id}`,
         goalData
       );
       
@@ -72,7 +72,7 @@ export const Profile = () => {
   const handleDeleteGoal=async()=>{
     const toastId=toast.loading("Loading...");
     try {
-      const response=await apiConnector("DELETE",`http://localhost:8080/api/goals/${user.id}`)
+      const response=await apiConnector("DELETE",`http://localhost:8081/api/goals/${user.id}`)
       toast.success("Goal Deleted");
       setGoalData([]);
       toast.dismiss(toastId)

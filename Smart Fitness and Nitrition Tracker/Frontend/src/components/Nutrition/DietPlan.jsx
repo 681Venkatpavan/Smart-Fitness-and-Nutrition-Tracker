@@ -20,7 +20,7 @@ export const DietPlan= ({ setPlanMealModal}) => {
     try {
       const response = await apiConnector(
         "POST",
-        "http://localhost:8080/api/dietplans/add",
+        "http://localhost:8081/api/dietplans/add",
         dietPlanData
       );
       toast.success("Exercise Plan added");

@@ -22,7 +22,7 @@ export const AddMeal= ({ setAddMealModal,setMealData }) => {
     try {
       const response = await apiConnector(
         "POST",
-        "http://localhost:8080/api/meals/add",
+        "http://localhost:8081/api/meals/add",
         mealData
       );
       setMealData(prev =>[...prev, response]);

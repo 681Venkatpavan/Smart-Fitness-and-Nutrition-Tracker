@@ -24,7 +24,7 @@ export const NutritionDashboard = () => {
     try {
       const response = await apiConnector(
         "GET",
-        `http://localhost:8080/api/meals/get/${parseUser.id}`
+        `http://localhost:8081/api/meals/get/${parseUser.id}`
       );
       // console.log(response.data);
       setMealData(response.data);
@@ -40,7 +40,7 @@ export const NutritionDashboard = () => {
     try {
       const response = await apiConnector(
         "GET",
-        `http://localhost:8080/api/dietplans/get/${parseUser.id}`
+        `http://localhost:8081/api/dietplans/get/${parseUser.id}`
       );
       // console.log(response.data);
       setPlanMealData(response.data);
@@ -61,7 +61,7 @@ export const NutritionDashboard = () => {
     try {
       const response = await apiConnector(
         "DELETE",
-        `http://localhost:8080/api/meals/delete/${id}`
+        `http://localhost:8081/api/meals/delete/${id}`
       );
       setMealData(mealdata.filter((d) => d.id !== id));
       toast.success("Meal Deleted!");
@@ -78,7 +78,7 @@ export const NutritionDashboard = () => {
     try {
       const response = await apiConnector(
         "DELETE",
-        `http://localhost:8080/api/dietplans/delete/${id}`
+        `http://localhost:8081/api/dietplans/delete/${id}`
       );
       setPlanMealData(planMealData.filter((d) => d.id !== id));
       toast.success("Meal Plan Deleted!");

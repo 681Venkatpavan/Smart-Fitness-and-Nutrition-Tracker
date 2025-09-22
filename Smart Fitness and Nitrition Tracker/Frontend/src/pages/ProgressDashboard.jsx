@@ -19,7 +19,7 @@ function ProgressDashboard() {
     try {
       const response = await apiConnector(
         "GET",
-        `http://localhost:8080/api/comulativecount/${category}/${userId}`
+        `http://localhost:8081/api/comulativecount/${category}/${userId}`
       );
       toast.dismiss(toastId);
       const data=response.data;

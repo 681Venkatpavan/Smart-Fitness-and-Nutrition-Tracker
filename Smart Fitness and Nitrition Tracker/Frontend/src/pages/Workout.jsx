@@ -61,7 +61,7 @@ export const Workout = () => {
     try {
       const response = await apiConnector(
         "GET",
-        `http://localhost:8080/api/exercises/user/${parseUser.id}`
+        `http://localhost:8081/api/exercises/user/${parseUser.id}`
       );
       setData(response.data);
       toast.dismiss(toastId);
@@ -76,7 +76,7 @@ export const Workout = () => {
     try {
       const response = await apiConnector(
         "GET",
-        `http://localhost:8080/api/exercisePlan/get/${parseUser.id}`
+        `http://localhost:8081/api/exercisePlan/get/${parseUser.id}`
       );
       setExercisePlanData(response.data);
       toast.dismiss(toastId);
@@ -95,7 +95,7 @@ export const Workout = () => {
     try {
       const response = await apiConnector(
         "DELETE",
-        `http://localhost:8080/api/exercises/delete/${id}`
+        `http://localhost:8081/api/exercises/delete/${id}`
       );
       setData(data.filter((d) => d.id !== id));
       toast.success("Exercise Deleted!")
@@ -111,7 +111,7 @@ export const Workout = () => {
     try {
       const response = await apiConnector(
         "DELETE",
-        `http://localhost:8080/api/exercisePlan/delete/${id}`
+        `http://localhost:8081/api/exercisePlan/delete/${id}`
 
       );
       setExercisePlanData(exercisePlanData.filter((d) => d.id !== id));
